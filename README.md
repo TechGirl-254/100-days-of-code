@@ -3,3 +3,10 @@ This repository holds all the content of my 100 days of code challenge.
 First, I start with simple projects, just to create consistency in coding daily.
 As the days advance, so will the nature of the projects.
 The main aim here is to build a coding culture for 100 days straight.
+
+# day-1_band_name_generator
+This is the first project here. It's a simple name generator taht takes input from a user, and uses screen concatenation to generate a new name.
+The lessons learned here include:
+  1. Input handling
+  2. Error handling, ensuring all input is a string
+  3. String concatenation
