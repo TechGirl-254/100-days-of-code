@@ -1,0 +1,18 @@
+print("Welcome to tip calculator")
+
+total_bill = input("Enter the amount of your total bill in numbers ")
+tip = input("Do you wish to give a tip of 10, 15, or 25% ? ")
+people_paying = input("How many people are paying the bill? ")
+
+try:
+  isinstance(float(total_bill), float) == True
+  isinstance(int(tip), int) == True
+  isinstance(int(people_paying), int) == True
+  
+  bill_with_tip = (float(total_bill) * (100 + int(tip))) / 100
+  split_bill = round((bill_with_tip / int(people_paying)), 2)
+  
+  print(f"Each person paying the bill should contribute {split_bill} to cover the bill and the tip, which amounts to {bill_with_tip}")
+
+except ValueError:
+  print("Enter only numerical values to any question asked")
