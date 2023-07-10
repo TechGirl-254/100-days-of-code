@@ -1,0 +1,27 @@
+#This program uses user generated weight and height to calculate BMI
+
+height = input("enter your height in m: ") 
+
+#The height input exists outside the try except block. 
+#If you put it inside,and a ValueError occors, 
+#it prevents the code from asking for the weight input below, and the program crashes.
+
+weight = input("enter your weight in kg: ")
+
+try:
+    isinstance(float(height), float) == True
+
+#sinstance checks whether its input is a float or an int, its second arguement specifies what to check.
+
+    isinstance(float(weight), float) == True
+
+    bmi = float(weight) / (float(height) ** 2)
+    print(f"{weight} ÷ ({height} x {height}) = {bmi}")
+    print(int(float(weight) // (float(height) ** 2)))
+
+except ValueError:
+    print("You did not enter a number for your height or weight")
+
+#All operations need to be inside the try block.
+#Otherwise is the computation part is outside the block, and there's a ValueError, 
+#a second ValueError will occor that cannot be handled by the existing try except block.
