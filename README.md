@@ -18,3 +18,6 @@ However, I managed to resolve it, and learnt the following valuable lessons.
   1. How to use try and except blocks for multiple checks.
   2. Conversion of string inputs to other input types that can work with mathematical operators.
   3. How to check the type of an int or float in a comparative scenario.
+
+# day-2_tip_calculator
+This program takes the total bill, percentage tip, and number of clients paying the bill, then t generates the total bill, inclusive of tip, and lets each client know how much they need to pay. It borrows heavily from the concepts of the BMI calculator.
