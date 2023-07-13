@@ -8,20 +8,25 @@ height = input("enter your height in m: ")
 
 weight = input("enter your weight in kg: ")
 
-try:
-    isinstance(float(height), float) == True
-
-#sinstance checks whether its input is a float or an int, its second arguement specifies what to check.
-
-    isinstance(float(weight), float) == True
+isinstance(float(weight), float) == True
 
     bmi = float(weight) / (float(height) ** 2)
-    print(f"{weight} ÷ ({height} x {height}) = {bmi}")
-    print(int(float(weight) // (float(height) ** 2)))
+    #print(f"{weight} ÷ ({height} x {height}) = {bmi}")
+    final_value= round(float(weight) / (float(height) ** 2))
 
+    if final_value < 18.5:
+        print(f"Your BMI is {final_value}, you are underweight.")
+    elif final_value >= 18.5 and final_value < 25:
+        print(f"Your BMI is {final_value}, you have a normal weight.")
+    elif final_value >= 25 and final_value < 30:
+        print(f"Your BMI is {final_value}, you are slightly overweight.")
+    elif final_value >= 30 and final_value < 35:
+        print(f"Your BMI is {final_value}, you are obese.")
+    else:
+        print(f"Your BMI is {final_value}, you are clinically obese." )
+   
 except ValueError:
     print("You did not enter a number for your height or weight")
-
 #All operations need to be inside the try block.
 #Otherwise is the computation part is outside the block, and there's a ValueError, 
 #a second ValueError will occor that cannot be handled by the existing try except block.
