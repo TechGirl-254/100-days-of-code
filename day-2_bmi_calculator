@@ -16,11 +16,11 @@ isinstance(float(weight), float) == True
 
     if final_value < 18.5:
         print(f"Your BMI is {final_value}, you are underweight.")
-    elif final_value >= 18.5 and final_value < 25:
+    elif final_value < 25:
         print(f"Your BMI is {final_value}, you have a normal weight.")
-    elif final_value >= 25 and final_value < 30:
+    elif final_value < 30:
         print(f"Your BMI is {final_value}, you are slightly overweight.")
-    elif final_value >= 30 and final_value < 35:
+    elif final_value < 35:
         print(f"Your BMI is {final_value}, you are obese.")
     else:
         print(f"Your BMI is {final_value}, you are clinically obese." )
