@@ -1,0 +1,140 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Tech Heist.")
+print("You've found your way here because you are a daring soul, seeking adventure in the tech space.\nHere's where your adventure begins.\n") 
+
+#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+
+#Write your code below this line 👇
+
+print("The day is 12 December 2028. The global economy is on its knees.\nThe ultra-rich keep getting richer, while the poor sink deeper into poverty.\nYou must do something to stop it.\n\nLucky for you, you have recieved the response email you've been waiting for.\nOpening this email means the end of your life as you know it.\nIt will the begining of a new identity.\n")
+
+open_email = input("Will you open it? Type Y for Yes and N for No: \n")
+
+uppercase_open_email = open_email.upper()
+
+if uppercase_open_email != "Y" and uppercase_open_email != "N":
+  print("\nYou lost before you even started! Next time follow the instructions given.")
+
+else:
+  if uppercase_open_email == "Y":
+    print("\nIf you are reading this, it is beacuse Tech Heist has selected you as one of it's newest recruits.\n\nThis news should scare you more than it makes you happy.\nBut if you are too scared, now is the time to decline.\n")
+    
+    decline = input("Will you decline? Type Y for Yes and N for No: \n")
+    uppercase_decline = decline.upper()
+    
+    if uppercase_decline != "Y" and uppercase_decline != "N":
+      print("\nYour failure to follow instructions has cost you your spot.\nWe have no room for mistakes.")
+    else:
+      if uppercase_decline == "Y":
+        print("\nYou have done well to admit your fear.\nThis is where we part ways. Good luck!.")
+      elif uppercase_decline == "N":
+        print("\nFortune favors the brave.\nYour choice has proven your bravery and earned you the right to proceed to the next stage.\n\nBut first, we need you to understand exactly what you're getting in to.\n\nTech Heist is a team of elite techies that want to end financial chaos through tech.\nWe are planning a heist into the worlds financial networks, and our first stop will be the Global Asset Reserve.\n\nThis is a highly secure facility, but we must breech it.\nIn the next section, you will answer a range of questions that will help us know what role to give you in our mission.\nRemember, you will only succeed if you are true to yourself.Good luck!. ")
+        
+        question1 = input("Would you prefer a silent sweep, S or a grand heist, G? ")
+        question1 = question1.upper()
+        
+        if question1 != "S" and question1 != "G":
+          print("\nYour failure to follow instructions has cost you your spot.\nWe have no room for mistakes.")
+        else:
+          if question1 == "S":
+            s_question2 = input("Would you prefer to create the heist plan, C or to execute it, E? ")
+            s_question2 = s_question2.upper()
+            if s_question2 != "C" and s_question2 != "E":
+              print("\nYour failure to follow instructions has cost you your spot.\nWe have no room for mistakes.")
+            else:
+              if s_question2 == "C":
+                s_question3 = input("Since you prefer creating, would you rather use technical tools, T or flexible tools, F if both can get the job done? ")
+                s_question3 = s_question3.upper()
+                if s_question3 != "T" and s_question3 != "F":
+                  print("\nYour failure to follow instructions has cost you your spot.\nWe have no room for mistakes.")
+                else:
+                  if s_question3 == "T":
+                    print("We are assigning you the role of a Backend Developer")
+                  elif s_question3 == "F":
+                    print("We are assigning you the role of a Solutions Architect")
+                  print("Now that you have your designated role, sit, and wait patiently.\nWe will be in touch.")
+                  
+              elif s_question2 == "E":
+                s_question3 = input("Since you prefer executing, would you rather coordinate the team, L or be a team member, M?")
+                s_question3 = s_question3.upper()
+                if s_question3 != "L" and s_question3 != "M":
+                  print("\nYour failure to follow instructions has cost you your spot.\nWe have no room for mistakes.")
+                else:
+                  if s_question3 == "L":
+                    print("We are assigning you the role of a DevOps Engineer")
+                    print("Now that you have your designated role, sit, and wait patiently.\nWe will be in touch.")
+                  elif s_question3 == "M":
+                    s_question4 = input("As a team member, would you prefer to keep an watch for danger, W or be the get-away-driver D?")
+                    s_question4 = s_question4.upper()
+                    if s_question4 != "W" and s_question3 != "D":
+                      print("\nYour failure to follow instructions has cost you your spot.\nWe have no room for mistakes.")
+                    else:
+                      if s_question4 == "W":
+                        print("We are assigning you a Cyber Security role")
+                      elif s_question4 == "D":
+                        print("We are assigning you a System Admin")
+                      print("Now that you have your designated role, sit, and wait patiently.\nWe will be in touch.")
+                
+          elif question1 == "G":
+            g_question2 = input("Would you prefer to create the heist plan, C or to execute it, E? ")
+            g_question2 = g_question2.upper()
+            if g_question2 != "C" and g_question2 != "E":
+              print("\nYour failure to follow instructions has cost you your spot.\nWe have no room for mistakes.")
+            else:
+              if g_question2 == "C":
+                g_question3 = input("Since you prefer creating, would you rather use technical tools, T or flexible tools, F if both can get the job done? ")
+                g_question3 = g_question3.upper()
+                if g_question3 != "T" and g_question3 != "F":
+                  print("\nYour failure to follow instructions has cost you your spot.\nWe have no room for mistakes.")
+                else:
+                  if g_question3 == "T":
+                    print("We are assigning you the role of a Frontend Developer")
+                  elif g_question3 == "F":
+                    print("We are assigning you the role of a UI/UX Designer")
+                  print("Now that you have your designated role, sit, and wait patiently.\nWe will be in touch.")
+              elif g_question2 == "E":
+                g_question3 = input("Since you prefer executing, would you rather coordinate the team, L or be a team member, M? ")
+                g_question3 = g_question3.upper()
+                if g_question3 != "L" and g_question3 != "M":
+                  print("\nYour failure to follow instructions has cost you your spot.\nWe have no room for mistakes.")
+                else:
+                  if g_question3 == "L":
+                    print("We are assigning you the role of a Project Manager")
+                    print("Now that you have your designated role, sit, and wait patiently.\nWe will be in touch.")
+                  elif g_question3 == "M":
+                    g_question4 = input("As a team member, would you prefer to keep watch for danger, W or be the get-away-driver D? ")
+                    g_question4 = g_question4.upper()
+                    if g_question4 != "W" and g_question4 != "D":
+                      print("\nYour failure to follow instructions has cost you your spot.\nWe have no room for mistakes.")
+                    else:
+                      if g_question4 == "W":
+                        print("We are assigning you the role of a QA Tester")
+                      elif g_question4 == "D":
+                        print("We are assigning you the role of an Analyst")
+                        
+                      print("Now that you have your designated role, sit, and wait patiently.\nWe will be in touch.")
+                        
+                
+                
+              
