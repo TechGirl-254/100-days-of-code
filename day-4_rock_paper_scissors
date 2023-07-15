@@ -1,0 +1,50 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+import random
+print("Welcome to Rock, Paper, Scissors.\nYou will be playing against the computer. Best of luck!")
+
+players_choice = input("What do you choose? Enter 3 for Rock, 2 for Scissors and 1 for Paper: \n")
+
+players_choice = int(players_choice.upper())
+
+if players_choice != 3 and players_choice != 2 and players_choice != 1:
+  print("Wrong entry. Next time enter 3 for Rock, 2 for Scissors and 1 for Paper.")
+else:
+  image_list = [rock, paper, scissors]
+  choice_list = [1, 2, 3]
+  
+  computers_choice = random.choice(choice_list)
+  
+  print(f"You chose: \n{image_list[players_choice - 1]}\nComputer chose: \n{image_list[computers_choice - 1]}\n")
+  
+  if computers_choice > players_choice:
+      print("Computer wins, you lose")
+  elif computers_choice < players_choice:
+      print("You win, Computer loses")
+  else:
+      print("It's a tie")
