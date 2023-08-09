@@ -1,0 +1,87 @@
+//SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.0;
+
+//Transactions is the equivalent of an OOP class
+contract Transactions {
+    uint256 transactionCount;
+//Transfer event
+    event Transfer(address from, address receiver, uint amount, string message, uint256 timestamp, string keyword);
+
+    struct TransferStruct {
+        address sender;
+        address receiver;
+        uint amount;
+        string message;
+        uint256 timestamp;
+        string keyword;
+    }
+//A transaction array storing each transctions details
+    TransferStruct[] transactions;
+
+//Records transactions on-chain
+//It first recods the transactions into the transaction array
+//Then it emits the transfer event
+    function addToBlockchain(address payable receiver, uint amount, string memory message, string memory keyword) public {
+        transactionCount += 1;
+        transactions.push(TransferStruct(msg.sender, receiver, amount, message, block.timestamp, keyword));
+
+        emit Transfer(msg.sender, receiver, amount, message, block.timestamp, keyword);
+    }
+
+//Returns transactions
+    function getAllTransactions() public view returns (TransferStruct[] memory) {
+        return transactions;
+    }
+
+//Returns transaction counts
+    function getAllTransactionCount() public view returns (uint256) {
+        return transactionCount;
+    }
+
+}
+
+//deploy.js
+const main = async () => {
+  const currentTimestampInSeconds = Math.round(Date.now() / 1000);
+  const unlockTime = currentTimestampInSeconds + 60;
+
+  const lockedAmount = hre.ethers.parseEther("0.001");
+
+  const lock = await hre.ethers.deployContract("Lock", [unlockTime], {
+    value: lockedAmount,
+  });
+
+  await lock.waitForDeployment();
+
+  console.log(
+    `Lock with ${ethers.formatEther(
+      lockedAmount
+    )}ETH and unlock timestamp ${unlockTime} deployed to ${lock.target}`
+  );
+}
+
+const runMain = async () => {
+  try {
+    await main();
+    process.exit(0);
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
+}
+
+runMain()
+
+//packages.json
+{
+  "name": "smart_contracts",
+  "version": "1.0.0",
+  "description": "\"\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+}
